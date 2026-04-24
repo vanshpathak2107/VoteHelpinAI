@@ -21,8 +21,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-md shadow-purple-500/20">
-                <span className="text-white font-bold text-xs">VS</span>
+              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-md shadow-purple-500/20 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300">
+                <span className="text-white font-bold text-xs tracking-wider">VS</span>
               </div>
               <span className="text-base font-bold gradient-text">VoteSphere AI</span>
             </div>

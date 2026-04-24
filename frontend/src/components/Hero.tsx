@@ -41,6 +41,7 @@ function ParticleField() {
             width: p.size,
             height: p.size,
             background: `rgba(${p.color}, ${p.opacity})`,
+            willChange: 'transform, opacity',
           }}
           animate={{
             y: ['100vh', '-5vh'],
@@ -225,16 +226,16 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45 }}
           >
-            <Link href="/journey" className="gradient-button flex items-center justify-center gap-2.5 group text-base px-10 py-4 shadow-lg shadow-blue-500/20">
-              <Map className="w-5 h-5" />
+            <Link href="/journey" className="gradient-button flex items-center justify-center gap-2.5 group text-base px-10 py-4 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300">
+              <Map className="w-5 h-5 group-hover:animate-pulse" />
               Start Learning
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
             </Link>
-            <Link href="/chat" className="glass-button flex items-center justify-center gap-2 hover:border-cyan-500/30">
+            <Link href="/chat" className="glass-button flex items-center justify-center gap-2 hover:border-cyan-500/30 hover:bg-cyan-500/5 hover:-translate-y-0.5 transition-all duration-300">
               <Bot className="w-5 h-5 text-cyan-400" />
               Ask AI Assistant
             </Link>
-            <Link href="/quiz" className="glass-button flex items-center justify-center gap-2 hover:border-purple-500/30">
+            <Link href="/quiz" className="glass-button flex items-center justify-center gap-2 hover:border-purple-500/30 hover:bg-purple-500/5 hover:-translate-y-0.5 transition-all duration-300">
               <Brain className="w-5 h-5 text-purple-400" />
               Take the Quiz
             </Link>

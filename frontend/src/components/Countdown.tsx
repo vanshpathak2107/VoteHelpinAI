@@ -24,13 +24,13 @@ const ZERO_TIME = { days: 0, hours: 0, minutes: 0, seconds: 0, passed: false };
 function CountdownUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] border border-white/[0.12] backdrop-blur-sm flex items-center justify-center shadow-lg shadow-black/20">
+      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] border border-white/[0.12] backdrop-blur-sm flex items-center justify-center shadow-lg shadow-black/20 hover:border-white/[0.25] hover:shadow-white/5 transition-all duration-300 group cursor-default">
         <motion.span
           key={value}
           initial={{ y: -8, opacity: 0, scale: 0.9 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-          className="text-2xl sm:text-3xl font-bold gradient-text-accent tabular-nums"
+          className="text-2xl sm:text-3xl font-bold gradient-text-accent tabular-nums group-hover:scale-110 transition-transform duration-300"
         >
           {String(value).padStart(2, '0')}
         </motion.span>

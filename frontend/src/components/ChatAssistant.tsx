@@ -158,11 +158,11 @@ export default function ChatAssistant() {
         </AnimatePresence>
         {loading && (
           <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className="flex gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-md shadow-purple-500/20"><Bot className="w-4 h-4 text-white" /></div>
-            <div className="glass-card p-4 rounded-2xl rounded-tl-sm">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-md shadow-purple-500/20 animate-pulse"><Bot className="w-4 h-4 text-white animate-bounce-soft" /></div>
+            <div className="glass-card p-4 rounded-2xl rounded-tl-sm border-blue-500/20 shadow-lg shadow-blue-500/5">
               <div className="flex items-center gap-3 text-sm text-slate-400">
                 <div className="typing-dots"><span></span><span></span><span></span></div>
-                <span className="text-xs">Thinking...</span>
+                <span className="text-xs font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Thinking...</span>
               </div>
             </div>
           </motion.div>

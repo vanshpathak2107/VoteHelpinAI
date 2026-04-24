@@ -39,7 +39,7 @@ export default function GlossarySearch() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search election terms..."
-            className="w-full bg-white/[0.04] border border-white/10 rounded-xl pl-12 pr-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 focus:bg-white/[0.06] focus:shadow-lg focus:shadow-blue-500/5 transition-all duration-300"
+            className="w-full bg-white/[0.04] border border-white/10 rounded-xl pl-12 pr-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 focus:bg-white/[0.06] focus:shadow-lg focus:shadow-blue-500/20 transition-all duration-300"
             aria-label="Search glossary"
           />
           {query && (
@@ -62,7 +62,7 @@ export default function GlossarySearch() {
           const count = GLOSSARY_TERMS.filter(t => t.category === cat).length;
           return (
             <button key={cat} onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
-              className={`px-3.5 py-2 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 ${selectedCategory === cat ? 'bg-white/10 text-white border border-white/20 shadow-sm shadow-white/5' : 'bg-white/[0.04] text-slate-500 border border-white/5 hover:text-white hover:bg-white/[0.08]'}`}>
+              className={`px-3.5 py-2 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 ${selectedCategory === cat ? 'bg-white/10 text-white border border-white/20 shadow-sm shadow-white/5' : 'bg-white/[0.04] text-slate-500 border border-white/5 hover:text-white hover:bg-white/[0.12] hover:scale-105'}`}>
               <div className="w-2 h-2 rounded-full" style={{ background: categoryColors[cat] || '#64748B' }} />
               {cat} ({count})
             </button>

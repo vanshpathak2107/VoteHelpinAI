@@ -162,9 +162,9 @@ export default function QuizSystem() {
                   else bg = 'bg-white/[0.02] border-white/5 opacity-50';
                 }
                 return (
-                  <motion.button key={i} whileHover={!answered ? { scale: 1.01 } : {}} whileTap={!answered ? { scale: 0.99 } : {}}
+                  <motion.button key={i} whileHover={!answered ? { scale: 1.02, x: 4 } : {}} whileTap={!answered ? { scale: 0.98 } : {}}
                     onClick={() => handleSelect(i)}
-                    className={`w-full flex items-center gap-3 p-4 rounded-xl border text-left transition-all ${bg}`}
+                    className={`w-full flex items-center gap-3 p-4 rounded-xl border text-left transition-all duration-200 ${bg} ${!answered ? 'hover:shadow-md hover:shadow-white/5' : ''}`}
                     disabled={answered}
                   >
                     <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0 ${answered && isCorrect ? 'bg-emerald-500 text-white' : answered && isSelected ? 'bg-red-500 text-white' : 'bg-white/10 text-slate-400'}`}>
