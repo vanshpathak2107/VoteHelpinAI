@@ -64,11 +64,13 @@ app.use((err, req, res, next) => {
 });
 
 // ─── Start Server ─────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🗳️  VoteSphere AI Backend running on port ${PORT}`);
-  console.log(`   Health: http://localhost:${PORT}/api/health`);
-  console.log(`   Chat:   POST http://localhost:${PORT}/api/chat`);
-  console.log(`   Glossary: http://localhost:${PORT}/api/glossary\n`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`\n🗳️  VoteSphere AI Backend running on port ${PORT}`);
+    console.log(`   Health: http://localhost:${PORT}/api/health`);
+    console.log(`   Chat:   POST http://localhost:${PORT}/api/chat`);
+    console.log(`   Glossary: http://localhost:${PORT}/api/glossary\n`);
+  });
+}
 
 module.exports = app;
